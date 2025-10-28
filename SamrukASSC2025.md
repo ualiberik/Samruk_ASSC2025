@@ -1,5 +1,5 @@
 # Samruk Station
-## Location and mission of the settlement [A]
+## Location and mission of the settlement
 Our team chose the polar orbit of the Moon as the location of our space settlement.
 ##### “...But why, some say the moon? Why choose this as our goal?...” 
 We are not limited in the scale of the project, but we want it to be as realistic and achievable as possible. 
@@ -16,7 +16,7 @@ A station in the orbit of the Moon can be a transhipment point or spaceport in l
 - Lunar regolith is very similar to the Earth rock by the chemical compound (and consists of silicon, iron, aluminum, calcium etc.) [4] which can be used as building material for the new modules of the station.
 - Space near the Moon has fewer dozens of radiation compared with the outer solar system and gas giants. About 0.96-1.24 мSv/day at the Moon's orbit [5].
 
-## Structure of the station [B]
+## Structure of the station
 The orbital station consists of a central not-rotating cylinder — a central hub, two artificial gravity rings rotating in different directions and engines. The central hub is used for experiments with weightlessness, industry and docking. Living modules rotate by magnetic forces and the whole biosphere lives there. Engines are placed on the end face of the central hub and used for maneuvers and orbital corrections.
 ### Central hub
 The central hub is a cylinder that doesn't rotate and has no artificial gravity. It has docking ports, engines, magnetic elements and flywheels. The central hub is used as adapter between two rings, for docking, for industrial complexes and for experiments with weightlessness. It is connected with living modules (through magnetism, without contact) and gives them a rotation.
@@ -40,9 +40,10 @@ Central hub and rotor donʼt contact, thatʼs why, living modules will be powere
 To transmit data radio communication will be used.
 
 ## References
-### A
+### Location and mission of the settlement
 1. https://books.google.kz/books?id=S4xDhVCxAQIC&pg=PA184&redir_esc=y#v=onepage&q&f=false
 2. https://cfpl.ae.utexas.edu/wp-content/uploads/2010/10/science_article.pdf
 3. https://www.sciencedirect.com/science/article/abs/pii/S0019103507001285
 4. https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples
 5. https://www.nature.com/articles/s41586-024-07927-7
+### Structure of the station
