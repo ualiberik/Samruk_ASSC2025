@@ -125,6 +125,8 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 
 ## Economical aspects
 
+## Risks
+
 ## Bibliography
 ### Location and mission of the settlement
 1. https://books.google.kz/books?id=S4xDhVCxAQIC&pg=PA184&redir_esc=y#v=onepage&q&f=false
@@ -132,3 +134,5 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 3. https://www.sciencedirect.com/science/article/abs/pii/S0019103507001285
 4. https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples
 5. https://www.nature.com/articles/s41586-024-07927-7
+
+## Methods/instruments
