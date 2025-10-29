@@ -1,11 +1,11 @@
 # Samruk Station
 
 ## Team members
-- Uali Berik – Mission of the station, Location of the station, General structure, Resource extraction, 3D modeling, Visual design
-- Nurzhan Kunakbayev – Demographic aspects, Political aspects, Financial aspects, Economical aspects, Infrastructure
-- Amina Toxankyzy – Demographic aspects, Social aspects, Infrastructure
-- Arlan Tairov – Thermal regulation of the station, Food supply of the station, Medicine and healthcare, Atmosphere and climate
-- Arman Temirbulatov – Radiation protection, Energy systems of the station, Transportation system, Waste management
+- Uali Berik – Mission of the station, Location of the station, General structure, Resource extraction, 3D modeling, Visual design.
+- Nurzhan Kunakbayev – Demographic aspects, Political aspects, Financial aspects, Economical aspects, Infrastructure.
+- Amina Toxankyzy – Demographic aspects, Social aspects, Infrastructure, Design.
+- Arlan Tairov – Thermal regulation of the station, Food supply of the station, Medicine and healthcare, Atmosphere and climate.
+- Arman Temirbulatov – Radiation protection, Energy systems of the station, Transportation system, Waste management.
 
 ## Abstract
 SamrukStation is the space settlement in the Earthʼs Moon polar orbit.
@@ -38,8 +38,23 @@ The orbital station consists of a central not-rotating cylinder — a central hu
 The central hub is a cylinder with 30m diameter that doesn't rotate and has no artificial gravity. It has docking ports, engines, magnetic elements and flywheels. The central hub is used as adapter between two rings, for docking, for industrial complexes and for experiments with weightlessness. It is connected with living modules (through magnetism, without contact) and gives them a rotation.
 ### Living modules
 Each "ring" has 3 pairs of living modules, that is, in total station has 12 living modules. Living modules are separated to increase safety and fault tolerance (in case of accident in one or several living modules, the others will be safe), but they are also connected with each other through tunnels with gateways. Each living module is connected with rotor through two cylinder tunnels.
+Each living module is segment of ring and has height of 60m and width of 120m. 
+Living modules have angle of 12° between them.
+Whole living area consists of two parts:
+- Humans living area — 7 800 000m^2 (including personal and public areas, calculated in next chapters).
+- Another biosphere (plants and farms) living area — 980 407m^2 (calculated in next chapters).
+Therefore, total living area — 8 780 407m^2, 8 780 407m^2 / 2 = 731 700m^2 — for each module.
+2714.688mR - 74653.92m^2 = 731700m^2
+R = (731700m^2 + 74653.92m) / 2714.688m = 297m.
+r = R - 60m = 237m.
 ### Artificial gravity
 In order for the biosphere to be able to inhabit the station for a long time, it is necessary to recreate conditions on Earth as closely as possible, including imitating of the Earthʼs gravity. Artificial gravity will be made by centrifugal force by rotation of the living modules. Acceleration in living modules will be equal about 1 Earthʼs g.
+a = w^2 * R = g
+w = sqrt(g / R)
+w = sqrt(9.81m/s^2 / 297m) = 0.183rad/s = 10.5°/s
+T = 360° / 10.5°/s = 34.29s
+RPM = 60s / 34.29s = 1.75 — rotation frequency to maintain g in the first floor.
+a = w^2 * R = (0.18rad/s)^2 * 237m = 7.94m/s^2 — centrifugal acceleration in the last floor (still in 9.81±20% limit).
 #### Rotation method
 The inner rim of rotor has 64 of permanent magnets that alternate poles. The outer rim of central hub has 64 of electromagnets (that create a field when current is passed through them and polarity is depend on direction of the current). Each electromagnet is turned on in the certain moment, which is controlled by speed controller (ESC). The ESC receives angular position data from Hall sensors along the rim. By sequentially energizing electromagnets with a phase shift of 120°, continuous rotation of the ring is achieved, similar to a 3-phase BLDC system. Thus, the rotation of the living modules is made by the same construction as rotation in brushless motors.
 #### Torque compensation
