@@ -4,8 +4,8 @@
 - Uali Berik – Mission of the station, Location of the station, General structure, Resource extraction, 3D modeling, Visual design.
 - Nurzhan Kunakbayev – Demographic aspects, Political aspects, Financial aspects, Economical aspects, Infrastructure.
 - Amina Toxankyzy – Demographic aspects, Social aspects, Infrastructure, Design.
-- Arlan Tairov – Thermal regulation of the station, Food supply of the station, Medicine and healthcare, Atmosphere and climate.
-- Arman Temirbulatov – Radiation protection, Energy systems of the station, Transportation system, Waste management.
+- Arlan Tairov – Food supply of the station, Medicine and healthcare, Atmosphere and climate.
+- Arman Temirbulatov – Radiation protection, Energy systems of the station, Transportation system, Waste management,Thermal regulation of the station,
 
 ## Abstract
 SamrukStation is the space settlement in the Earthʼs Moon polar orbit.
