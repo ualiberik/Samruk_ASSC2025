@@ -3,6 +3,10 @@
 ## Team members
 
 ## Abstract
+SamrukStation is the space settlement in the Earthʼs Moon polar orbit.
+Mission of the SamrukStation is being experimental platform of building large fully autonomous orbital settlements, being transhipment point for spacecrafts that have long-distance missions and being industrial complex.
+It will have population of 120000 people after 80 years of operation, having 25200 people at the start. The settlement can be fully autonomous and doesnʼt need constant support from the Earth. Living conditions of the settlement are close to the Earthʼs conditions, having imitation of Earthʼs gravity, biodiversity and social/cultural life.
+In our project, we try to maintain balance between realism and innovations.
 
 ## Table of contents
 
@@ -13,7 +17,7 @@ We are not limited in the scale of the project, but we want it to be as realisti
 Moon — is the closest and most thoroughly explored celestial body, but still not settled. In our opinion, we need to overcome this frontier, before we will move beyond.
 A station in the orbit of the Moon can be a transhipment point or spaceport in long-distance missions, such as missions to Mars, Venus, Mercury and the outer solar system, where spacecrafts can refuel and have repair. Thus, settlement in the orbit of the Moon would be a very important step toward the colonizing of the solar system.
 ![Picture1. Stationʼs orbit.](/location-01.jpg)
-### Station will be located in 600km polar orbit, because:
+### Station will be located in circular (eccentricity about 0) 600km polar orbit, because:
 - Polar orbit allows near-continuous exposure to sunlight. The moon’s axial tilt is only 5.145° [1], which means the poles are constantly illuminated by the Sun.
 - Polar orbit and rotation of the moon around its axis allows to land on any point on the surface.
 - 600km altitude is more stable and requires less amount of corrections, but still close enough to the surface.
@@ -26,7 +30,7 @@ A station in the orbit of the Moon can be a transhipment point or spaceport in l
 ## Structure of the station
 The orbital station consists of a central not-rotating cylinder — a central hub, two artificial gravity rings rotating in different directions and engines. The central hub is used for experiments with weightlessness, industry and docking. Living modules rotate by magnetic forces and the whole biosphere lives there. Engines are placed on the end face of the central hub and used for maneuvers and orbital corrections.
 ### Central hub
-The central hub is a cylinder that doesn't rotate and has no artificial gravity. It has docking ports, engines, magnetic elements and flywheels. The central hub is used as adapter between two rings, for docking, for industrial complexes and for experiments with weightlessness. It is connected with living modules (through magnetism, without contact) and gives them a rotation.
+The central hub is a cylinder with 30m diameter that doesn't rotate and has no artificial gravity. It has docking ports, engines, magnetic elements and flywheels. The central hub is used as adapter between two rings, for docking, for industrial complexes and for experiments with weightlessness. It is connected with living modules (through magnetism, without contact) and gives them a rotation.
 ### Living modules
 Each "ring" has 3 pairs of living modules, that is, in total station has 12 living modules. Living modules are separated to increase safety and fault tolerance (in case of accident in one or several living modules, the others will be safe), but they are also connected with each other through tunnels with gateways. Each living module is connected with rotor through two cylinder tunnels.
 ### Artificial gravity
@@ -40,7 +44,7 @@ L — torque, r - raduis, w - angle speed.
 According to this formula, the torque depends not only on speed of rotation, but on mass too. The mass of each ring can be different, but we canʼt change the speed of rotation of the rings (to keep centrifugal force) to compensate the torque. There will be residual uncompensated torque and thatʼs why central hub will have flywheels. Flywheels will be rotated by motor. Their mass and radius are constant, therefore, it is enough to rotate them with certain speed (which will be calculated by PID or more developed controllers) to compensate residual torque.
 #### Flywheelsʼ saturation
 However, the station will have a lot of microdisturbances: micrometeorites, solar pressure, gravity gradients, orbital corrections, reaction during docking of ships — they all give an extra torque. Thus, overtime, flywheels will accumulate too much, not safe speed — which is called flywheelʼs saturation. To solve this problem, the station will make desaturation — removal of the torque, when flywheels accumulate too dangerous speed. The station will use RCS to shed excess torque and desaturate flywheels. 
-mp0 — propellant mass for one desaturation, mp — propellant per day, m — mass of central hub, m-dot — propellant mass flow rate, L — torque, r — radius, w — angular speed, F - force, T — instantaneous torque, t — time, ve — exhaust rate, Isp - specific impulse, n — number of desaturations per year.
+mp0 — propellant mass for one desaturation, mp — propellant per day, m — mass of central hub, m-dot — propellant mass flow rate, L — torque, r — radius, w — angular speed, F — force, T — instantaneous torque, t — time, ve — exhaust rate, Isp - specific impulse.
 - L = 1/2 * m * r^2 * w (assume that the central hub is a solid cylinder)
 - T = Fr
 - dL = T * t
@@ -54,9 +58,17 @@ mp0 = (F * t) / ve
 mp0 = dL / (r * ve)
 mp0 = dL / (r * Isp * g0) = (1/2 * m * r^2 * dw) / (r * Isp * g0) — mass of propellant needed for one desaturation.
 mp = ((1/2 * m * r^2 * dw) / (r * Isp * g0)) * 12 / 365 * 1.2 — mass of propellant per day (assume that there are 12 desaturations per year, 1.2 for reserve)
+mp = 
 ### Magnetic suspensions
 To avoid mechanical contact and increase the service life of the station, the rotor will be stabilized by active magnetic bearing (AMB). Supports with electromagnets will be placed on the central hub. Controller takes data about the location of the ring and applies certain current to the matching electromagnets to stabilize it. In case of failure of AMB, spare mechanical bearing will be used.
 ### Transport system
+Central hub doesnʼt rotate, while living modules and rotor do. Thatʼs why station needs special system to transfer humans and cargo between them — transport rings.
+Transport rings work like "elevator". Transport rings rotate the same way as the rotors and living modules.
+At first, transport ring synchronizes with rotation of point A.
+Then, it docks to point A through tunnel, humans and cargo move to the ring.
+Then, it undocks and changes its rotation speed to synchronize with rotation of point B.
+Then, it docks to point B in the same way.
+Finally, it undocks and synchronizes with rotation of point A and process repeats.
 ### Communication and power transmission
 Central hub and rotor donʼt contact, thatʼs why, living modules will be powered by inductive wireless transmission, through magnetic coils. 
 n = n0 * ​(r0 / r​​)^3, where
@@ -76,11 +88,21 @@ Each ring consumes about 200MW of energy, therefore,
 Ploss = 200MW * 0.01 = 2MW — of extra energy.
 To transmit data radio communication will be used.
 
+## Zonation
+
 ## Energy production
 
 ## Radiation shield
 
 ## Thermal control system
+
+## Food
+
+## Atmosphere and climate
+
+## Medicine
+
+## Waste management
 
 ## Resource industry
 To maintain its existence, the settlement needs to have a constant flow of resources, such as water, building materials, rocket and energy fuel.
@@ -96,26 +118,18 @@ The three types of raw materials that will be extracted from the surface: buildi
   ![Picture1. Delivering rocket 3D-model](/Delivering rocket.jpg)
 - Power supply. All described earlier structures have solar panels to power themselves. The complexes also will be supplied by solar batteries and energy from the orbital station that will be transfered through laser rays, microwaves and delivering rockets.
 #### Resources
-- Water. Water ice is concentrated at the south pole of the moon, in eternally darkened craters, such as Shackleton crater in which one of the regolith-extracting stations will be placed. According to LRO data, regolith in Shackleton consists about 5-10% of water by mass.
-- Heluim-3. Unlike water, helium-3 is concentrated in illuminated regions, such as the lunar maria (Mare Tranquillitatis, Oceanus Procellarum or Mare Fecunditatis), in which regolith-extracting stations also will be placed. Regolith in these regions consist of about 50ppb of Helium-3.
+- Water. Water ice is concentrated at the south pole of the moon, in eternally darkened craters, such as Shackleton crater in which one of the regolith-extracting stations will be placed. According to LRO data, regolith in Shackleton consists about 5-10% of water by mass [1].
+- Heluim-3. Unlike water, helium-3 is concentrated in illuminated regions, such as the lunar maria (Mare Tranquillitatis, Oceanus Procellarum or Mare Fecunditatis), in which regolith-extracting stations also will be placed. Regolith in these regions consist of about 50ppb of Helium-3 [2].
 - Building materials. Metals will be extracted from the rest of the regolith that is mined by water and helium-3 extracting stations.
 ![Picture1. Complexes location](/Complexes location.jpg)
 ### Transportation
-As stated above, lunar regolith will be transported to the orbital settlement by large amounts of delivering rockets. Rockets are docked to the tank in the base and fly to orbit when the tank is full and orbital settlement's trajectory is above. Delivering rockets have 4 thrust-vectoring engines and RCS to perform maneuvers. After approaching the orbital station, rockets attach the tank to the station and refuel to return empty tanks back and lift other tanks.
+As stated above, lunar regolith will be transported to the orbital settlement by large amounts of delivering rockets. Rockets are docked to the tank in the base and fly to orbit when the tank is full and orbital settlement's trajectory is above. Delivering rockets have 4 thrust-vectoring engines and RCS to perform maneuvers. After approaching the orbital station, rockets attach the tank to the station and refuel to deorbit and ereturn empty tanks back and lift other tanks.
 ![Picture1. Delivering rocket 3D-model](/Delivering rocket.jpg)
 ### Processing
 On the orbital settlement regolith will be heated and melted in vacuum furnaces to separate volatile components of it. 
 - Water. Most of the water will be used by the biosphere of the settlement and thermoregulation systems. Another part will be electrolyzed to gain hydrogen and oxygen that can be used as fuel pair for rocket engines and for production of  “heavy water” that is used in thermonuclear energetics.
 - Building materials. Metals are then refined from the rest of metals-consisting regolith by electromagnetic separation and used in building of new modules, repairing, manufacturing etc.
 - Heluim-3. Helium-3 will be extracted from regolith and used in thermonuclear energetics in pair with heavy hydrogen.
-
-## Food
-
-## Atmosphere and climate
-
-## Medicine
-
-## Waste management
 
 ## Demography aspects
 
@@ -134,5 +148,8 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 3. https://www.sciencedirect.com/science/article/abs/pii/S0019103507001285
 4. https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples
 5. https://www.nature.com/articles/s41586-024-07927-7
+### Resource industry
+1. https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012GL052119
+2. https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1998GL900305
 
 ## Methods/instruments
