@@ -115,6 +115,11 @@ To transmit data radio communication will be used.
 ### Radiation
 Since the Moon has neither a magnetic field nor an atmosphere similar to Earth's, nearly 100% of cosmic rays reach its surface. Therefore, the station itself requires reliable protection from radiation, which is extremely harmful to humans.
 According to studies, radiation levels in lunar orbit reach approximately 1.37 mSv [1] per day, equivalent to 500 mSv per year. For humans, this exceeds the natural background radiation on Earth, which is approximately 3 mSv per year. [2] For long-term habitation and life extension, the dose should be reduced to 20 mSv per year, and for pregnant women, to 6.6 mSv per year. In other words, the crew should receive only about 4% of external radiation. [3]
+### Mechanical Damage
+Since small space objects, such as micrometeorites, could collide with the station, structural protection is necessary. Space is filled with debris, and avoiding every collision is impossible, so even minor collisions will occur.
+### Temperatures
+To prevent the station from overheating due to solar radiation and internal heat generation, thermal protection and heat dissipation systems (such as radiators and ammonia-based heat pipes) are required. About half of solar energy is infrared, about 40% is visible light, and the rest is ultraviolet radiation. Additionally, the station is exposed to charged particles from the solar wind.
+Without reflective coatings (such as aluminized Kapton, white paint, or photonic crystals), the station's hull would quickly heat up—like a sheet of metal exposed to the sun.
 ### Protective layers
 1. The outer layer is the white "Beta" fabric used on the ISS. It provides thermal resistance, reflects light, and protects the surface from degradation. [4]
 2. Multilayer insulation (MLI) made of aluminized Kapton, approximately 0.05 cm thick and with a surface density of 0.007 g/cm². It reflects solar radiation and minimizes thermal fluctuations. This material reflects more than 90% of light and prevents overheating. It is widely used on the ISS, the James Webb Space Telescope, and other space missions. [5]
@@ -187,7 +192,7 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 5. https://www.nature.com/articles/s41586-024-07927-7
 ### Shielding
 1. https://pmc.ncbi.nlm.nih.gov/articles/PMC10427620/?
-2. 
+2. https://www.cdc.gov/radiation-health/about/how-to-measure-radiation
 3. https://nss.org/wp-content/uploads/2018/01/NSS-JOURNAL-Orbital-Space-Settlement-Radiation-Shielding.pdf
 4. https://ntrs.nasa.gov/api/citations/19930015285/downloads/19930015285.pdf
 5. https://ntrs.nasa.gov/api/citations/20080045503/downloads/20080045503.pdf
