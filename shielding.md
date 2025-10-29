@@ -24,23 +24,22 @@ To live there long-term and even have families, the radiation needs to drop to 2
 
 The station uses a layered shield system, with each layer doing a specific job:
 
-*   **Outer layer:** White Beta cloth (like on the ISS) handles heat, reflects light, and protects the surface.
+ **Outer layer:** White Beta cloth (like on the ISS) handles heat, reflects light, and protects the surface.
 
-*   **Second layer:** Aluminized Kapton MLI (super thin and light) bounces sunlight and keeps temperatures steady. It reflects over 90% of light to prevent overheating. It's used a lot on the ISS and telescopes like James Webb.
+**Second layer:** Aluminized Kapton MLI (super thin and light) bounces sunlight and keeps temperatures steady. It reflects over 90% of light to prevent overheating. It's used a lot on the ISS and telescopes like James Webb.
 
-*   **Third layer:** A self-healing composite panel (Dyneema fibers with polyethylene glycol and silica inside). If a small meteoroid pokes a hole, it seals up almost instantly. Solid balls move to the hole, the liquid inside hardens, and it plugs the break. The Dyneema mesh spreads out stress so it can take a lot of hits. This material means fewer repairs and longer missions.
+**Third layer:** A self-healing composite panel (Dyneema fibers with polyethylene glycol and silica inside). If a small meteoroid pokes a hole, it seals up almost instantly. Solid balls move to the hole, the liquid inside hardens, and it plugs the break. The Dyneema mesh spreads out stress so it can take a lot of hits. This material means fewer repairs and longer missions.
 
-*   **Fourth layer:** Boron nitride nanotube (BNNT) composite. BNNTs are strong, heat-resistant, and block radiation well.
+**Fourth layer:** Boron nitride nanotube (BNNT) composite. BNNTs are strong, heat-resistant, and block radiation well.
 
-*   **Fifth layer:** A water barrier. Water is great at absorbing protons and neutrons because of its hydrogen content. NASA sees it as a good radiation blocker.
+ **Fifth layer:** A water barrier. Water is great at absorbing protons and neutrons because of its hydrogen content. NASA sees it as a good radiation blocker.
 
-*   **Sixth layer:** A Kevlar barrier. Kevlar (super strong for its weight) catches small meteoroids and resists tearing. It's often used in Whipple shields for impact protection.
+ **Sixth layer:** A Kevlar barrier. Kevlar (super strong for its weight) catches small meteoroids and resists tearing. It's often used in Whipple shields for impact protection.
+ **Seventh layer:** High-density polyethylene (HDPE). Creates a hydrogen-rich barrier to reduce protons and neutrons.
 
-*   **Seventh layer:** High-density polyethylene (HDPE). Creates a hydrogen-rich barrier to reduce protons and neutrons.
+**Eighth layer:** An anodized aluminum outer frame. It holds the air inside and makes the structure strong.
 
-*   **Eighth layer:** An anodized aluminum outer frame. It holds the air inside and makes the structure strong.
-
-*   **Final layer:** An anodized aluminum alloy (6061-T6) forms the main structure and outside covering. The anodized surface resists wear, reflects light, protects from UV rays, and prevents plasma and static electricity buildup.
+**Final layer:** An anodized aluminum alloy (6061-T6) forms the main structure and outside covering. The anodized surface resists wear, reflects light, protects from UV rays, and prevents plasma and static electricity buildup.
 
 **Windows:**
 
