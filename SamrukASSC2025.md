@@ -60,15 +60,20 @@ The closest place to extract these resources — Surface of the Earth's Moon.
 The three types of raw materials that will be extracted from the surface: building materials, water ice and helium-3. All of them are found in lunar regolith. Several resources-extracting complexes will be placed across the surface of the Moon. Each complex will be specialized for a particular resource (water, metals or helium-3).
 #### Structure of the resources-extracting stations
 - Resource storage (base). Each station has a large building with tanks that store lunar regolith. Lunar regolith will be pressurized in tanks to store it as effectively as it's possible. Each tank has docking ports for delivering rockets.
+  ![Picture1. Storage 3D-model](/Storage.jpg)
 - Mining rovers. Each station has a large amount of autonomous rovers that mine lunar regolith and deliver it to storage. They use tracks to move and regolith digging devices.
+  ![Picture1. Rover 3D-model](/Rover.jpg)
 - Delivering rockets. Rockets that are docked to the storage and lift full tanks to the orbital settlement. They have 4 free-rotating rocket engines and RCS to perform maneuvers and for docking.
+  ![Picture1. Delivering rocket 3D-model](/Delivering rocket.jpg)
 - Power supply. All described earlier structures have solar panels to power themselves. The complexes also will be supplied by solar batteries and energy from the orbital station that will be transfered through laser rays, microwaves and delivering rockets.
 #### Resources
 - Water. Water ice is concentrated at the south pole of the moon, in eternally darkened craters, such as Shackleton crater in which one of the regolith-extracting stations will be placed. According to LRO data, regolith in Shackleton consists about 5-10% of water by mass.
 - Heluim-3. Unlike water, helium-3 is concentrated in illuminated regions, such as the lunar maria (Mare Tranquillitatis, Oceanus Procellarum or Mare Fecunditatis), in which regolith-extracting stations also will be placed. Regolith in these regions consist of about 50ppb of Helium-3.
 - Building materials. Metals will be extracted from the rest of the regolith that is mined by water and helium-3 extracting stations.
+![Picture1. Complexes location](/Complexes location.jpg)
 ### Transportation
 As stated above, lunar regolith will be transported to the orbital settlement by large amounts of delivering rockets. Rockets are docked to the tank in the base and fly to orbit when the tank is full and orbital settlement's trajectory is above. Delivering rockets have 4 thrust-vectoring engines and RCS to perform maneuvers. After approaching the orbital station, rockets attach the tank to the station and refuel to return empty tanks back and lift other tanks.
+![Picture1. Delivering rocket 3D-model](/Delivering rocket.jpg)
 ### Processing
 On the orbital settlement regolith will be heated and melted in vacuum furnaces to separate volatile components of it. 
 - Water. Most of the water will be used by the biosphere of the settlement and thermoregulation systems. Another part will be electrolyzed to gain hydrogen and oxygen that can be used as fuel pair for rocket engines and for production of  “heavy water” that is used in thermonuclear energetics.
