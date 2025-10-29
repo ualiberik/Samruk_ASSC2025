@@ -1,5 +1,12 @@
 # Samruk Station
-## Location and mission of the settlement
+
+## Team members
+
+## Abstract
+
+## Table of contents
+
+## Location and mission
 Our team chose the polar orbit of the Moon as the location of our space settlement.
 ##### “...But why, some say the moon? Why choose this as our goal?...” 
 We are not limited in the scale of the project, but we want it to be as realistic and achievable as possible. 
@@ -14,7 +21,7 @@ A station in the orbit of the Moon can be a transhipment point or spaceport in l
 - The moon surface consists not very much, but enough water [2] to provide for the needs of the biosphere and infrastructure in the settlement.
 - The surface of the moon have a lot of Helium-3 [3] — which can cover the fuel and energetics needs of the station.
 - Lunar regolith is very similar to the Earth rock by the chemical compound (and consists of silicon, iron, aluminum, calcium etc.) [4] which can be used as building material for the new modules of the station.
-- Space near the Moon has fewer dozens of radiation compared with the outer solar system and gas giants. About 0.96-1.24 мSv/day at the Moon's orbit [5].
+- Space near the Moon has dozens of times less radiation than, for example, near gas giants. About 0.96-1.24 мSv/day at the Moon's orbit [5].
 
 ## Structure of the station
 The orbital station consists of a central not-rotating cylinder — a central hub, two artificial gravity rings rotating in different directions and engines. The central hub is used for experiments with weightlessness, industry and docking. Living modules rotate by magnetic forces and the whole biosphere lives there. Engines are placed on the end face of the central hub and used for maneuvers and orbital corrections.
@@ -35,15 +42,39 @@ According to this formula, the torque depends not only on speed of rotation, but
 However, the station will have a lot of microdisturbances: micrometeorites, solar pressure, gravity gradients, orbital corrections, reaction during docking of ships — they all give an extra torque. Thus, overtime, flywheels will accumulate too much, not safe speed — which is called flywheelʼs saturation. To solve this problem, the station will make desaturation — removal of the torque, when flywheels accumulate too dangerous speed. The station will use RCS to shed excess torque and desaturate flywheels.
 ### Magnetic suspensions
 To avoid mechanical contact and increase the service life of the station, the rotor will be stabilized by active magnetic bearing (AMB). Supports with electromagnets will be placed on the central hub. Controller takes data about the location of the ring and applies certain current to the matching electromagnets to stabilize it. In case of failure of AMB, spare mechanical bearing will be used.
+### Transport system
 ### Communication and power transmission
 Central hub and rotor donʼt contact, thatʼs why, living modules will be powered by inductive wireless transmission, through magnetic coils. Efficiency of this power transmission method is approximately proportional to the cube of the distance between coils, which means that efficiency drops sharply with increasing distance. To increase efficiency of power transmission, resonant inductive transmission and HTS superconductors will be used. Considering them, distance between rotor and central hub can be about 30cm, which is still very close, but consindering active magnectic bearing, it is not a problem. To support work of HTS superconductors, their temperature must be about 80K. A backup laser-based power transmission system provides emergency power if inductive coupling fails.
 To transmit data radio communication will be used.
 
-## References
+## Energy production
+
+## Radiation shield
+
+## Thermal control system
+
+## Resource industry
+
+## Food
+
+## Atmosphere and climate
+
+## Medicine
+
+## Waste management
+
+## Demography aspects
+
+## Political aspects
+
+## Social aspects
+
+## Economical aspects
+
+## Bibliography
 ### Location and mission of the settlement
 1. https://books.google.kz/books?id=S4xDhVCxAQIC&pg=PA184&redir_esc=y#v=onepage&q&f=false
 2. https://cfpl.ae.utexas.edu/wp-content/uploads/2010/10/science_article.pdf
 3. https://www.sciencedirect.com/science/article/abs/pii/S0019103507001285
 4. https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples
 5. https://www.nature.com/articles/s41586-024-07927-7
-### Structure of the station
