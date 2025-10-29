@@ -30,7 +30,7 @@ A station in the orbit of the Moon can be a transhipment point or spaceport in l
 - The moon surface consists not very much, but enough water [2] to provide for the needs of the biosphere and infrastructure in the settlement.
 - The surface of the moon have a lot of Helium-3 [3] — which can cover the fuel and energetics needs of the station.
 - Lunar regolith is very similar to the Earth rock by the chemical compound (and consists of silicon, iron, aluminum, calcium etc.) [4] which can be used as building material for the new modules of the station.
-- Space near the Moon has dozens of times less radiation than, for example, near gas giants. About 0.96-1.24 мSv/day at the Moon's orbit [5].
+- Space near the Moon has dozens of times less radiation than, for example, near gas giants. About 1.37 мSv/day at the Moon's orbit [5].
 
 ## Structure of the station
 The orbital station consists of a central not-rotating cylinder — a central hub, two artificial gravity rings rotating in different directions and engines. The central hub is used for experiments with weightlessness, industry and docking. Living modules rotate by magnetic forces and the whole biosphere lives there. Engines are placed on the end face of the central hub and used for maneuvers and orbital corrections.
@@ -49,12 +49,11 @@ R = (731700m^2 + 74653.92m) / 2714.688m = 297m.
 r = R - 60m = 237m.
 ### Artificial gravity
 In order for the biosphere to be able to inhabit the station for a long time, it is necessary to recreate conditions on Earth as closely as possible, including imitating of the Earthʼs gravity. Artificial gravity will be made by centrifugal force by rotation of the living modules. Acceleration in living modules will be equal about 1 Earthʼs g.
-a = w^2 * R = g
-w = sqrt(g / R)
-w = sqrt(9.81m/s^2 / 297m) = 0.183rad/s = 10.5°/s
-T = 360° / 10.5°/s = 34.29s
-RPM = 60s / 34.29s = 1.75 — rotation frequency to maintain g in the first floor.
-a = w^2 * R = (0.18rad/s)^2 * 237m = 7.94m/s^2 — centrifugal acceleration in the last floor (still in 9.81±20% limit).
+a = w^2 * Rav = g
+w = sqrt(g / Rav)
+w = sqrt(9.81m/s^2 / 267m) = 0.1917rad/s = 10.96°/s (267 is average radius)
+T = 360° / 10.96°/s = 32.84s
+RPM = 60s / 34.29s = 1.83 — rotation frequency to maintain g
 #### Rotation method
 The inner rim of rotor has 64 of permanent magnets that alternate poles. The outer rim of central hub has 64 of electromagnets (that create a field when current is passed through them and polarity is depend on direction of the current). Each electromagnet is turned on in the certain moment, which is controlled by speed controller (ESC). The ESC receives angular position data from Hall sensors along the rim. By sequentially energizing electromagnets with a phase shift of 120°, continuous rotation of the ring is achieved, similar to a 3-phase BLDC system. Thus, the rotation of the living modules is made by the same construction as rotation in brushless motors.
 #### Torque compensation
@@ -108,19 +107,37 @@ Each ring consumes about 200MW of energy, therefore,
 Ploss = 200MW * 0.01 = 2MW — of extra energy.
 To transmit data radio communication will be used.
 
-## Zonation
+## Zoning
 
 ## Energy production
 
-## Radiation shield
-
+## Shielding
+### Radiation
+Since the Moon has neither a magnetic field nor an atmosphere similar to Earth's, nearly 100% of cosmic rays reach its surface. Therefore, the station itself requires reliable protection from radiation, which is extremely harmful to humans.
+According to studies, radiation levels in lunar orbit reach approximately 1.37 mSv [1] per day, equivalent to 500 mSv per year. For humans, this exceeds the natural background radiation on Earth, which is approximately 3 mSv per year. [2] For long-term habitation and life extension, the dose should be reduced to 20 mSv per year, and for pregnant women, to 6.6 mSv per year. In other words, the crew should receive only about 4% of external radiation. [3]
+### Protective layers
+1. The outer layer is the white "Beta" fabric used on the ISS. It provides thermal resistance, reflects light, and protects the surface from degradation. [4]
+2. Multilayer insulation (MLI) made of aluminized Kapton, approximately 0.05 cm thick and with a surface density of 0.007 g/cm². It reflects solar radiation and minimizes thermal fluctuations. This material reflects more than 90% of light and prevents overheating. It is widely used on the ISS, the James Webb Space Telescope, and other space missions. [5]
+3. Self-healing composite panel made of Dyneema fibers filled with polyethylene glycol and silicon particles, 6.5 cm thick and with a density of 11.8 g/cm². When punctured by micrometeoroids, the layer seals almost instantly. Capillary and shear forces drive solid microspheres toward the impact site, where the thickening of the liquid filler leads to hardening and sealing. The Dyneema mesh redistributes stress, allowing the layer to withstand multiple impacts without failure. This innovative material enables long-term missions by reducing the need for external repairs. [12]
+4. Boron nitride nanotube (BNNT) composite with a thickness of 10 cm and a density of 14 g/cm². BNNTs have exceptional mechanical strength, thermal stability, and radiation attenuation properties, making them ideal for lightweight yet strong space structures. [6]
+5. Water shield with a thickness of 40 cm and a density of 40 g/cm². Due to its hydrogen content, water effectively absorbs protons and neutrons; NASA recognizes it as an excellent material for radiation shielding. [7]
+6. Kevlar with a thickness of 0.5 cm and a density of 0.72 g/cm². Kevlar is five times stronger than steel by weight, intercepts micrometeorite fragments, and is resistant to tearing. Often used in Whipple shields for impact protection. [9]
+7. 30 cm thick, 28.5 g/cm² high-density polyethylene (HDPE) layer, providing hydrogen-containing shielding to attenuate protons and neutrons. [7]
+8. The final layer is a 0.35 cm thick, 0.945 g/cm² anodized aluminum housing, providing a hermetic seal and mechanical strength. [8]
+### Windows
+For space observation without compromising radiation shielding, multilayer transparent windows are offered: borosilicate glass (17.5 mm) [9], transparent polycarbonate (10 mm), transparent ceramic (25 mm) [12], a thin layer of barium or lead glass (4 mm) [10], and external louvers made of aluminum alloy and Kapton (2 cm thick). This combination provides transparency while blocking most harmful radiation.
+Radiation Attenuation Calculation:
+Attenuation follows an exponential law:
+D = D₀ e^(-x/λ), where λ ≈ 30 g/cm² for hydrogen-rich materials such as HDPE or water, D₀ = 500 mSv/year, and the total thickness of the protective mass x ≈ 95 g/cm². [6]
+Therefore, D ≈ 20 mSv/year, which corresponds to the recommended safe level for long-term use.
+This multilayer system provides impact resistance, excellent heat dissipation, and reliable radiation protection. Innovative materials such as BNNT composites and self-healing polymers enable durable, lightweight, and self-sustaining station designs suitable for long-term lunar orbit missions.
 ## Thermal control system
 
-## Food
+## Food and water
 
 ## Atmosphere and climate
 
-## Medicine
+## Healthcare
 
 ## Waste management
 
@@ -159,7 +176,7 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 
 ## Economical aspects
 
-## Risks
+## Risks and assumptions
 
 ## Bibliography
 ### Location and mission of the settlement
@@ -168,6 +185,21 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 3. https://www.sciencedirect.com/science/article/abs/pii/S0019103507001285
 4. https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples
 5. https://www.nature.com/articles/s41586-024-07927-7
+### Shielding
+1. https://pmc.ncbi.nlm.nih.gov/articles/PMC10427620/?
+2. 
+3. https://nss.org/wp-content/uploads/2018/01/NSS-JOURNAL-Orbital-Space-Settlement-Radiation-Shielding.pdf
+4. https://ntrs.nasa.gov/api/citations/19930015285/downloads/19930015285.pdf
+5. https://ntrs.nasa.gov/api/citations/20080045503/downloads/20080045503.pdf
+6. https://www.nasa.gov/wp-content/uploads/2017/07/niac_2011_phasei_thibeault_radiationshieldingmaterials_tagged.pdf
+7. https://ntrs.nasa.gov/api/citations/20090020691/downloads/20090020691.pdf
+8. https://www.nasa.gov/wp-content/uploads/2023/03/prc-5006-current.pdf
+9. https://hvit.jsc.nasa.gov/shield-development/materials.html
+10. https://www.sciencedirect.com/science/article/abs/pii/S0969806X22007393
+11. https://marshield.com/publications/Medical_RadiationShieldingLeadGlass.pdf
+12. https://www.dyneema.com/media/jhrmt0j4/dyneema-composites.pdf
+https://www.researchgate.net/publication/325021854_Shear_thickening_effect_of_the_suspensions_of_silica_nanoparticles_in_PEG_with_different_particle_size_concentration_and_shear
+13. https://digitalcommons.unl.edu/nasapub/121/
 ### Resource industry
 1. https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012GL052119
 2. https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1998GL900305
