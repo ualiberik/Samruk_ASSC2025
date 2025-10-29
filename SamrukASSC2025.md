@@ -107,7 +107,7 @@ Each ring consumes about 200MW of energy, therefore,
 Ploss = 200MW * 0.01 = 2MW — of extra energy.
 To transmit data radio communication will be used.
 
-## Zoning
+## Energetics
 
 ## Energy production
 To calculate the station's approximate energy consumption, we'll assume 2.5 kW per person [1].
@@ -378,6 +378,11 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 3. https://www.sciencedirect.com/science/article/abs/pii/S0019103507001285
 4. https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples
 5. https://www.nature.com/articles/s41586-024-07927-7
+### Energetics
+1. https://www.sciencedirect.com/science/article/abs/pii/S0921344905000236 (We took 2.5 as a reserve)
+2. https://www.spectrolab.com/pv/support/Recent_Progress_Spectrolab_High-Efficiency_Space_Solar_Cells.pdf
+3. https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1562_web.pdf
+
 ### Shielding
 1. https://pmc.ncbi.nlm.nih.gov/articles/PMC10427620/?
 2. https://www.cdc.gov/radiation-health/about/how-to-measure-radiation
