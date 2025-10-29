@@ -1,5 +1,3 @@
-Okay, here's a more human way to say all that:
-
 **Space Station Protection**
 
 **Tiny Space Rocks:**
