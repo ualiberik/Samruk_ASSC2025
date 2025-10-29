@@ -35,16 +35,45 @@ In order for the biosphere to be able to inhabit the station for a long time, it
 The inner rim of rotor has 64 of permanent magnets that alternate poles. The outer rim of central hub has 64 of electromagnets (that create a field when current is passed through them and polarity is depend on direction of the current). Each electromagnet is turned on in the certain moment, which is controlled by speed controller (ESC). The ESC receives angular position data from Hall sensors along the rim. By sequentially energizing electromagnets with a phase shift of 120°, continuous rotation of the ring is achieved, similar to a 3-phase BLDC system. Thus, the rotation of the living modules is made by the same construction as rotation in brushless motors.
 #### Torque compensation
 To avoid the rotation of the central hub, the torque must be fully compensated, that is, the sum of torque must be equal to zero. To compensate the most of the torque two rings with 6 living modules each will rotate in different directions. 
-L = m * r * w, where
+L = m * r^2 * w, where
 L — torque, r - raduis, w - angle speed.
 According to this formula, the torque depends not only on speed of rotation, but on mass too. The mass of each ring can be different, but we canʼt change the speed of rotation of the rings (to keep centrifugal force) to compensate the torque. There will be residual uncompensated torque and thatʼs why central hub will have flywheels. Flywheels will be rotated by motor. Their mass and radius are constant, therefore, it is enough to rotate them with certain speed (which will be calculated by PID or more developed controllers) to compensate residual torque.
 #### Flywheelsʼ saturation
-However, the station will have a lot of microdisturbances: micrometeorites, solar pressure, gravity gradients, orbital corrections, reaction during docking of ships — they all give an extra torque. Thus, overtime, flywheels will accumulate too much, not safe speed — which is called flywheelʼs saturation. To solve this problem, the station will make desaturation — removal of the torque, when flywheels accumulate too dangerous speed. The station will use RCS to shed excess torque and desaturate flywheels.
+However, the station will have a lot of microdisturbances: micrometeorites, solar pressure, gravity gradients, orbital corrections, reaction during docking of ships — they all give an extra torque. Thus, overtime, flywheels will accumulate too much, not safe speed — which is called flywheelʼs saturation. To solve this problem, the station will make desaturation — removal of the torque, when flywheels accumulate too dangerous speed. The station will use RCS to shed excess torque and desaturate flywheels. 
+mp0 — propellant mass for one desaturation, mp — propellant per day, m — mass of central hub, m-dot — propellant mass flow rate, L — torque, r — radius, w — angular speed, F - force, T — instantaneous torque, t — time, ve — exhaust rate, Isp - specific impulse, n — number of desaturations per year.
+- L = 1/2 * m * r^2 * w (assume that the central hub is a solid cylinder)
+- T = Fr
+- dL = T * t
+- F = m-dot * ve
+- ve = Isp * g0
+- mp0 = m-dot * t
+Therefore,
+dL = F * r * t
+Ft = dL / r
+mp0 = (F * t) / ve
+mp0 = dL / (r * ve)
+mp0 = dL / (r * Isp * g0) = (1/2 * m * r^2 * dw) / (r * Isp * g0) — mass of propellant needed for one desaturation.
+mp = ((1/2 * m * r^2 * dw) / (r * Isp * g0)) * 12 / 365 * 1.2 — mass of propellant per day (assume that there are 12 desaturations per year, 1.2 for reserve)
 ### Magnetic suspensions
 To avoid mechanical contact and increase the service life of the station, the rotor will be stabilized by active magnetic bearing (AMB). Supports with electromagnets will be placed on the central hub. Controller takes data about the location of the ring and applies certain current to the matching electromagnets to stabilize it. In case of failure of AMB, spare mechanical bearing will be used.
 ### Transport system
 ### Communication and power transmission
-Central hub and rotor donʼt contact, thatʼs why, living modules will be powered by inductive wireless transmission, through magnetic coils. Efficiency of this power transmission method is approximately proportional to the cube of the distance between coils, which means that efficiency drops sharply with increasing distance. To increase efficiency of power transmission, resonant inductive transmission and HTS superconductors will be used. Considering them, distance between rotor and central hub can be about 30cm, which is still very close, but consindering active magnectic bearing, it is not a problem. To support work of HTS superconductors, their temperature must be about 80K. A backup laser-based power transmission system provides emergency power if inductive coupling fails.
+Central hub and rotor donʼt contact, thatʼs why, living modules will be powered by inductive wireless transmission, through magnetic coils. 
+n = n0 * ​(r0 / r​​)^3, where
+n — current efficiency, r — current distance, r0 — minimal distance, n0 — r0 efficiency
+Efficiency of this power transmission method is approximately proportional to the cube of the distance between coils, which means that efficiency drops sharply with increasing distance.
+To increase efficiency of power transmission, resonant inductive transmission and HTS superconductors will be used. 
+n = (k^2 * Q1 * Q2) / (1 + k^2 * Q1 * Q2) — efficiency with resonant inductive transmission, where
+n — efficiency, k — connection coefficient (>0, <1), Q1, Q2 — quality coefficient of coils.
+k = (R / r)^3, where
+R ​— coil radius, r ​— distance between coils.
+if R = 5m, Q1 = Q2 = 10^3 (for HTS superconductors), n = 0.99 (for maximum efficiency)
+k^2 * Q1 * ​Q2​ = 99
+k = sqrt(99 / Q1 * Q2) = sqrt(99 / 10^6) = 0.00994
+r = R * (1/k)^1/3 = 5m * (1 / 0.00994)^1/3 = 20m
+According to this calculation, distance between rotor and cental hub could be 20m, keeping 99% efficiency. To support work of HTS superconductors, their temperature must be about 80K. A backup laser-based power transmission system provides emergency power if inductive coupling fails.
+Each ring consumes about 200MW of energy, therefore,
+Ploss = 200MW * 0.01 = 2MW — of extra energy.
 To transmit data radio communication will be used.
 
 ## Energy production
