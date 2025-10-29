@@ -110,6 +110,43 @@ To transmit data radio communication will be used.
 ## Zoning
 
 ## Energy production
+To calculate the station's approximate energy consumption, we'll assume 2.5 kW per person [1].
+Powering the entire station will require the use of several energy sources.
+### Solar energy
+Since the Moon is close to the Sun, solar energy is suitable for solar panels on the station. Also, since the station is in polar orbit, the time in the shadows is limited, improving efficiency. At lunar orbit, the solar flux is approximately 1360W per square meter (approximately the same as on Earth).
+To increase solar cell efficiency, we propose using IMMs, which provide 33% [2] of the total energy. The settlement will also use solar concentrators, including movable mirrors, to focus and magnify sunlight, guaranteeing sufficient power output for long-term viability. To avoid reducing cell efficiency as they heat up, we propose using photonic crystal coatings, which transmit light but not infrared radiation.
+If the station has a total of 120,000 people, then 2.5 kW * 120,000 = 300 MW. Let's add another 30% for other processes and, as a reserve, let's assign this task to thermonuclear fusion.
+The solar panel area can be calculated using the formula:
+A = P/(E × η × k)
+where:
+A — the required panel area, P — the required electrical power, E — the solar constant, η — the solar panel efficiency, k — the system loss coefficient (taking into account inverters, temperature, pollution, etc.).
+Substituting the values: η = 0.33, k = 0.95 (approximate value taking into account the station's technology and the insignificant shadow in polar orbit), the effective power per square meter is then:
+P_(1"m"^2) = 1361 × 0.33 × 0.95 ≈ 427" W/m²".
+Therefore, the formula for the area becomes:
+A = P/427.
+If the station requires 300 MW, the panel area will be:
+A = (300000000)/427 ≈ 702576m².
+Thus, with an efficiency of 33% and system losses of 5%, approximately 702576m² will be required to generate 300 MW.
+### Thermonuclear fusion
+Thermonuclear fusion — a technology not yet in use today, but one that will be highly effective in the future and is being actively studied. Thermonuclear fusion is very promising due to its incredible power (one reactor produces the equivalent of thousands of solar panels), its non-polluting properties, and its ability to operate continuously for decades. In our case, D-He3 can be used for thermonuclear fusion. Both of these components can be extracted from the Moon, but since this technology is not yet fully developed, we will not consider it as a basis for this study.
+Its efficiency is 40% [3], which means the reactions should release not 90, but 225 MW:
+Reaction energy E_D3≈18.3" MeV"=2.93×10^(-12) " J".
+Required number of reactions:
+R_D3=(225×10^6)/(2.93×10^(-12) )≈7.68×10^19 " reactions/s".
+Mass per reaction: D+³He ≈5.03 u ≈ 8.35×10^(-27)kg →
+m ̇≈7.68×10^19×8.35×10^(-27)≈6.41×10^(-7) kg/s.
+→ ~0.055 kg/day ≈ 20 kg/year (sum of D+³He).
+For a mixture of deuterium and helium-3 (reaction D + He-3 → He-4 + p) with a total fuel of 20.2 kg and a molar ratio of 2:1 (deuterium: helium-3), the calculation is as follows: total mass m=2.014×2x+3.016×x=7.044x, where 2.014 g/mol is the molar mass of the deuterium isotope (²H, one proton and one neutron), and 3.016 g/mol is the molar mass of the helium-3 isotope (³He, two protons and one neutron). From the equation x=20200/7.044≈2869mol. 
+Then the mass of deuterium = 2 x 2.014 x 2869 ≈ 11.55 kg, 
+the mass of helium-3 = 3.016 x 2869 ≈ 8.66 kg per year
+### Energy storage
+To store energy and distribute it during necessary and emergency situations, lithium-ion battery modules will be used. Let's say we want a 7-day energy reserve, then we need to calculate how much energy this is.
+E = P * N * t * 130% where E is energy, P is Power for 1 human, N is the number of humans, t is time (7 days)
+2.5 * 1000 * N * 24 * 3600 * 1.3 * 7 = 181 440 000 000 000 Joules
+Various mirrors and other components will also redirect light into special "ovens," where the temperature will be approximately 1500 degrees Celsius. To store all this energy, the batteries have a capacity, which is subtracted by the product of voltage and capacity in ampere-hours. In other words, if the station has 10,000 A*h batteries with a voltage of 400 volts, their number will be equal to the energy divided by the capacity of one battery module.
+181,440,000,000,000 Joules = 50,400 MWh; 50,400 MWh: (10,000 * 400) = 12,600 such modules, which will be distributed evenly across all units.
+FES (flywheel energy storage system) and SMES (superconducting energy storage system) systems will also be used as backup options.
+Food processing will also produce methane, which can be burned to generate energy or stored as fuel for the engines. Combustion energy is calculated by multiplying the efficiency by the specific heat of combustion of the fuel and by the mass of the fuel. However, this energy will be considered reserve and additional in certain cases, as it accounts for less than 1 percent of the total. (For more details on the operating principle, see the waste section)
 
 ## Shielding
 ### Radiation
@@ -138,9 +175,160 @@ Therefore, D ≈ 20 mSv/year, which corresponds to the recommended safe level fo
 This multilayer system provides impact resistance, excellent heat dissipation, and reliable radiation protection. Innovative materials such as BNNT composites and self-healing polymers enable durable, lightweight, and self-sustaining station designs suitable for long-term lunar orbit missions.
 ## Thermal control system
 
-## Food and water
+## Nutrition
+To sustain a lunar orbital colony with an expanding population over 80 years, food production must be entirely self-sufficient, reliable, and regenerative. The system should operate in a closed ecological cycle, combining biological, technological, and automated processes. Early years (0–10) will rely on starting reserves and system activation, while later decades will be maintained through autonomous, modular farms capable of adapting to demographic and
+environmental changes. [1][2][3]
+### Diet composition
+The astronauts’ and colonists’ diet must be carefully balanced to sustain muscle mass, bone
+strength, immune stability, and cognitive performance in reduced gravity. According to NASA’s
+Human Research Program and ESA nutrition protocols, the daily intake per person should
+include approximately:
+#### Proteins: 100–120 g/day [4]
+  Proteins maintain muscle tissue, repair cells, and regulate enzymatic activity. In low gravity,
+muscle atrophy occurs faster; therefore, protein consumption is vital. Sources include
+freeze-dried poultry, soy protein isolates, lentils, and microalgae such as Spirulina and Chlorella.
+Insect-based protein powders derived from crickets (Acheta domesticus), mealworms (Tenebrio
+molitor), and black soldier fly larvae (Hermetia illucens) provide a renewable, high-density
+source of essential amino acids. [5]
+#### Fats: 110–130 g/day [4]
+  Fats serve as compact energy sources and enable absorption of vitamins A, D, E, and K.
+Omega-3-rich algae oils will be the primary source, along with nuts, powdered dairy, and
+vegetable oils (olive, flaxseed). These fats play a key role in keeping the cardiovascular system
+healthy and maintaining immune balance during space missions.
+#### Carbohydrates: 350–400 g/day [4]
+  Carbohydrates provide the primary source of energy and stabilize blood glucose levels critical
+which are essential for concentration and mental performance. Main sources include dehydrated
+fruits, potatoes, whole-grain pasta, and long-storage bread mixes that can be rehydrated with
+purified water.
+#### Vitamins and Micronutrients
+Because sunlight exposure is limited in space, vitamin D must be supplied through synthetic
+sources. Calcium, phosphorus, and magnesium maintain bone mineral density; iron and vitamin
+B12 sustain oxygen transport and cognitive health. These micronutrients will be included in
+fortified foods, microalgae supplements, and compact multivitamin tablets to ensure a balanced
+diet. [6]
+These macronutrients are complemented by essential vitamins and minerals to prevent bone loss,
+anemia, and neurocognitive decline.
+### Food Production Infrastructure
+To ensure sustainable nutrition, four major agricultural modules will form the core of the closed-loop food system.
+#### Hydroponic Vertical Farms
+- Main crops: (minimum seven species): lettuce (Lactuca sativa), spinach (Spinacia oleracea), kale (Brassica oleracea var. sabellica), chard (Beta vulgaris subsp. cicla), basil (Ocimum basilicum) as an aromatic herb and antioxidant source, tomatoes (Solanum lycopersicum) for vitamins and lycopene, soybean / peas (Glycine max / Pisum sativum) for plant protein. Additionally: potato (Solanum tuberosum) in dedicated containers as a carbohydrate staple.
+Inputs: purified recycled water, mineral nutrient solutions (N, P, K, Ca, Mg), CO₂ from cabin air, LED light energy.
+Outputs: leafy vegetables, tomatoes, microgreens, and legumes (sources of vitamins A, C, K and plant protein); potatoes and grains for carbohydrates.
+Conditions: 18–25 °C, 50–70% humidity, pH 5.5–6.5, LED spectra (blue 450 nm + red 660nm).
+Area: 8m2/person.
+Role: provides psychological comfort (fresh food), vitamins, and carbohydrates.
+#### Microalgae Photobioreactors
+Inputs: water, CO₂, minerals, artificial or solar light.
+Outputs: biomass rich in proteins (50–60%), omega-3 fatty acids, vitamins B and E, and oxygen.
+Conditions: 20–30 °C, pH 7–8, high light intensity, continuous mixing.
+Volume: 1–5 L per person.
+Area: 1m2/person.
+Role: protein and lipid source, oxygen generation, and CO₂ recycling.
+#### Insect Farms
+Inputs: plant residues from hydroponics, processed algae biomass, sterilized food waste.
+Outputs: insect powder with 50–70% protein, 15–30% fat, vitamin B12, iron, zinc.
+Conditions: 25–30 °C, 50–70% humidity, automated trays and dryers.
+Area: 0.5m2/person.
+Role: main renewable source of animal protein and fat.
+#### Microbial Fermentation Modules
+Inputs: plant and insect waste, mineral salts, and nutrient media.
+Outputs: B-vitamins, amino acids, probiotics, enzymes, and fermentation-derived food additives.
+Conditions: sterile bioreactors, 25–37 °C depending on strain.
+Area: 0.05m2/person.
+Role: nutrient recycling and synthesis of essential micronutrients (e.g., B12, K).
+### Area calculations
+- Initial population N(0)=25 200
+- Final population after 80 years N(80) = 120000
+- Scaling exponent α=0.9
+8m2/person + 1m2/person + 0.5m2/person + 0.05m2/person = 9.55m2/person
+A(0,i) = a(i) * N(0) = 9.55m^2 * 25200 = 240660m^2
+A(N)=A(0)⋅(N/N(0))^α = 240660m^2 * 4.0738 = 980407m^2
+### Longevity and Maintenance Plan (80 Years)
+- Years 0–10: Initial phase with stored freeze-dried food, seeds, algal and insect cultures. Redundant energy and water reserves. Deployment of modular farm sections.
+- Years 10–30: Full activation of hydroponic and photobioreactor systems. Implementation of automated nutrient monitoring and waste recycling. Robotic maintenance ensures continuity.
+- Years 30-60: The colony reaches metabolic independence. Microbial fermentation modules and insect farms become major nutrient recyclers. Genetic seed banks and cryostorage safeguard biodiversity.
+- Years 60-80: Self-sustaining ecosystem with AI-driven optimization, predictive nutrient modeling, and intergenerational genetic renewal of crops and insect species. Continuous adaptation to population growth from X₀ to N inhabitants.
 
 ## Atmosphere and climate
+### Oxygen production
+The Samruk station will employ Chlorella microalgae as a primary oxygen source. Chlorella is a powerful tool for generating oxygen in space, as it exhibits a high rate of photosynthesis and is compact and efficient. It has been used in space missions and has shown its potential. The photosynthetic process in Chlorella requires only fundamental inputs: water, carbon dioxide, light energy, and trace minerals (including potassium, phosphorus, and sodium) to sustain cellular reproduction. In the experimental facilities of the Institute of Biophysics in Krasnoyarsk, specifically BIOS-1, BIOS-2, and BIOS-3, a two-component closed-loop life support system has been implemented, consisting of humans and chlorella. Carbon dioxide is placed in a specialized container that contains water with specific minerals and chlorella. Under the influence of fluorescent light, the carbon dioxide undergoes a photosynthesis reaction, converting it into oxygen.
+#### Stoichiometry and Key Constants (per person)
+Daily oxygen requirement (24 h):
+1.5 m^3 O₂ = 66.96 mol O₂.
+1 mol = 10^15 fmol => 66.96 mol = 6.696 * 10^16 fmol.
+Stoichiometrically, 1 mol of O₂ requires 1 mol of H₂O(for photosynthesis).
+Thus, the reaction water mass ≈ 1.206 L/person/day (66.96 mol * 18.015 g/mol ≈ 1205.5 g).
+This is a stoichiometric value; the actual circulating water volume in the reactor will be
+significantly larger.
+Chlorella cell parameters:
+Average cell diameter: ≈5 μm => cell volume ≈ 65.45 μm^3 = 6.545 * 10^(-14) L.
+Oxygen production rate: 25–400 fmol O₂/cell/hour.
+#### Daily oxygen production per cell: 600–9,600 fmol/cell/day
+High productivity (400 fmol/h => 9,600 fmol/day):
+N(min) = (6.696 * 10^16 fmol) / (9.6 * 10^3 fmol/day) ≈ 6.98 * 10^12 cells
+Low productivity (25 fmol/h => 600 fmol/day):
+N(max) = (6.696 * 10^16 fmol) / (600 fmol/day) ≈ 1.12 * 10^14 cells
+(Thus, 6.98 * 10^12 – 1.12 * 10^14 cells/day are required per person depending on productivity.)
+####  Chlorella biomass volume per person (range)
+High productivity:
+V(min) = 6.98 * 10^12 cells * 6.545 * 10^(-14) L/cell = 0.4566 L
+Low productivity:
+V(max) = 1.12 * 10^14 cells * 6.545 * 10^(-14) L/cell = 7.309 L
+(Thus, 0.457–7.31 L of biomass is required per person.)
+#### Stoichiometric water mass/volume for photosynthesis (per person)
+n(O₂) = 66.96 mol ⇒ requires ~66.96 mol H₂O⇒ water mass = 1,205.5 g ≈ 1.206 L.
+(This is a stoichiometric value – the reactor will utilize and circulate significantly more water.)
+#### Scaling for 120,000 people (final values)
+O₂ and H₂O totals:
+O₂: 1.5 m^3 * 120,000 = 180,000 m^3/day
+Stoichiometric water: 1.206 L * 120,000 = 144,720 L/day = 144.72 m^3/day
+Chlorella cells (total):
+High productivity (400 fmol/h):
+N(total,min) = 6.98 * 10^12 * 120,000 ≈ 8.37 * 10^17 cells
+Low productivity (25 fmol/h):
+N(total,max) = 1.12 * 10^14 * 120,000 ≈ 1.34 * 10^19 cells
+Biomass volume (total):
+High productivity: V(total,min) = 0.4566 L * 120,000 ≈ 54,792 L ≈ 54.79 m^3
+Low productivity: V(total,max) = 7.309 L * 120,000 ≈ 877,080 L ≈ 877.08 m^3
+(Summary: For 120,000 people, 8.37 * 10^17 – 1.34 * 10^19 cells are required, equivalent to
+~54.8 m^3 of biomass under optimal conditions or ~877.1 m^3 under low productivity.)
+### Reserve Oxygen Production Method
+In emergency scenarios (e.g., bioreactor failure or sudden crew expansion), the Samruk station employs water electrolysis (Electrolysis is the process of decomposing water (H₂O) into oxygen (O₂) and hydrogen (H₂) through the application of direct electric current) as a reliable backup method for oxygen generation.
+2H₂O → 2H₂ + O₂
+- Oxygen — directed into the life support system.
+- Hydrogen — stored as fuel for propulsion, power generation, or synthetic chemical
+processes.
+This method ensures 150% of daily oxygen demand and serves as a critical contingency capability under all non-nominal conditions.
+### Atmosphere composition
+The atmospheric composition aboard the Samruk station will be identical to that of Earth to ensure crew safety and comfort:
+- Nitrogen (N₂) — 78%
+- Oxygen (O₂) — 21%
+- Carbon dioxide (CO₂) — 0,03%
+Rationale for this composition:
+- Pure oxygen increases fire hazards and can be toxic to humans at high concentrations.
+- A nitrogen-dominated atmosphere would accelerate corrosion of the station's metal
+components.
+- The inclusion of water vapor is necessary to maintain comfortable air humidity levels
+This atmospheric composition provides optimal conditions for both human habitation and
+equipment operation aboard the station.
+### Climate
+#### Pressure
+Nominal cabin pressure: approximately 101.3 kPa (1 atm), or slightly reduced (~90–101 kPa) depending on the station’s architectural design.
+A near-Earth pressure level is preferred to prevent crew adaptation difficulties.
+#### Temperature
+Comfortable temperature range: 18–26 °C in inhabited modules.
+Auxiliary modules (e.g., agricultural or technical compartments) maintain specific temperature ranges depending on equipment requirements.
+Relative humidity:
+- 40–60 % in living areas (for human comfort and respiratory health),
+- lower in technical zones to reduce corrosion risk and prevent condensation.
+#### Ventilation 
+Continuous mechanical ventilation with balanced supply and exhaust airflow circulation.
+Air treatment includes:
+- HEPA filtration for particulates,
+- adsorption of volatile organic compounds (VOC),
+- catalytic purification for trace contaminants.
+
+### Water needs calculations
 
 ## Healthcare
 
@@ -204,7 +392,16 @@ On the orbital settlement regolith will be heated and melted in vacuum furnaces 
 11. https://marshield.com/publications/Medical_RadiationShieldingLeadGlass.pdf
 12. https://www.dyneema.com/media/jhrmt0j4/dyneema-composites.pdf
 https://www.researchgate.net/publication/325021854_Shear_thickening_effect_of_the_suspensions_of_silica_nanoparticles_in_PEG_with_different_particle_size_concentration_and_shear
-13. https://digitalcommons.unl.edu/nasapub/121/
+13. https://digitalcommons.unl.edu/nasapub/121
+### Nutrition
+1. https://pmc.ncbi.nlm.nih.gov/articles/PMC8747021/
+2. https://www.acorecycling.com/from-earth-to-mars-sustainability-lessons-for-space-colonies/
+3. https://www.nasa.gov/exploration-research-and-technology/growing-plants-in-space/
+4. https://pmc.ncbi.nlm.nih.gov/articles/PMC8747021/ (3.1.1. Key Components of Space Nutrition)
+5. https://www.airbus.com/en/newsroom/press-releases/2019-04-photobioreactor-oxygen-and-asource-of-nutrition-for-astronauts
+6. https://spacefood.competitionsciences.org/wp-content/uploads/2024/11/Astronaut-NutritionalNeeds-Guide-SFDC.pdf
+7. https://www.space.com/astronaut-pee-iss-water-recycling-98-percent-milestone
+8. https://www.aquatechtrade.com/news/water-reuse/how-is-water-recycled-in-space
 ### Resource industry
 1. https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2012GL052119
 2. https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/1998GL900305
